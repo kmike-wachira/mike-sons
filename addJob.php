@@ -11,33 +11,7 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-
-
-<nav class="navbar navbar-expand-md bg-light navbar-dark justify-content-right" id="navbar">
-  <a class="navbar-brand" href="#" id="logo">Mike and Sons</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="homecart.html">Products</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="tender.html">Tenders</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="jobs.html">Jobs </a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="login.html">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="register.html">Register</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <?php include 'incs/navbar.php';?>
 <div style="margin-top:250px;">
 
   <div class="container center">
@@ -77,7 +51,7 @@
           <input class="w3-input" type="date" min="10">
           <div class="container w3-center p-3">
             <button type="submit" class="btn btn-succes w3-round-large w3-border-red w3-center " name="addtender">Add Tender</button>
-            
+
           </div>
 
         </form>

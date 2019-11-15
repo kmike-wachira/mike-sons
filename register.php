@@ -14,31 +14,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-md bg-light navbar-dark justify-content-right" id="navbar">
-    <a class="navbar-brand" href="#" id="logo">Mike and Sons</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="homecart.html">Products</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="tender.html">Tenders</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="jobs.html">Jobs </a>
-        </li>
-          <li class="nav-item">
-          <a class="nav-link" href="login.html">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="register.html">Register</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <?php include 'incs/navbar.php';?>
 
 <div class="row container" style="margin-top:250px">
   <div class="col-md-3">
