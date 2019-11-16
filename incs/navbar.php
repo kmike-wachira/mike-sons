@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-md bg-grey navbar-dark justify-content-right" id="navbar">
   <a class="navbar-brand" href="index.php" id="logo">Mike and Sons</a>
   <button class="navbar-toggler w3-brown" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon ">+</span>
+    <span class="navbar-toggler-icon "></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
