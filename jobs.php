@@ -14,7 +14,6 @@
 <style media="screen">
   .contain{
     position: relative;
-    margin-top: 250px;
     margin-left:  25px;
     margin-right: 25px;
 
@@ -35,100 +34,18 @@
   <?php include 'incs/navbar.php';?>
 
    <!-- <div class="contain container-fluid" style="height:500px;background-image:url('img/image1.jpg');margin-top:200px;"> -->
-   <div class="contain container-fluid">
-       <img src="img/image1.jpg" alt="" height="300" width="100%">
+   <div class=" topp contain container-fluid w3-center">
+       <img src="img/image1.jpg" alt="" height="300" width="95%">
     <div class="centertext">Job Center</div>
 
     </div>
 
   <!-- available Jobs -->
-   <div class="container-fluid pt-4">
-      <div class=" w3-card-6 p-4 bg-light text-dark d-flex row">
-        <div class="col-md-6 col-sm-12">
-          <h4>Job title</h4>
-          <p>Job Description</p>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <span class="badge badge-pill p-3 badge-primary">Job duration</span>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <button class=" btn btn-primary w3-round-large w-25 w3-shadow-grey"type="button" name="button"> Apply</button>
-          <button class="w3-button w3-right  w3-xlarge w3-circle w3-white w3-card-4"><i class="far fa-star"></i></button>
+  <?php include 'php/fetchjobs.php';?>
+    <!-- available jobs -->
 
-        </div>
-      </div>
-   </div>
 
-   <!-- to be removed  -->
-   <div class="container pt-4">
-      <div class=" w3-card-6 p-4 bg-light text-dark d-flex row">
-        <div class="col-md-6 col-sm-12">
-          <h4>Job title</h4>
-          <p>Job Description</p>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <span class="badge badge-pill p-3 badge-primary">Job duration</span>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <button class=" btn btn-primary w3-round-large w-25 w3-shadow-grey"type="button" name="button"> Apply</button>
-          <button class="w3-button w3-right  w3-xlarge w3-circle w3-white w3-card-4"><i class="far fa-star"></i></button>
 
-        </div>
-      </div>
-   </div>
-
-   <div class="container pt-4">
-      <div class=" w3-card-6 p-4 bg-light text-dark d-flex row">
-        <div class="col-md-6 col-sm-12">
-          <h4>Job title</h4>
-          <p>Job Description</p>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <span class="badge badge-pill p-3 badge-primary">Job duration</span>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <button class=" btn btn-primary w3-round-large w-25 w3-shadow-grey"type="button" name="button"> Apply</button>
-          <button class="w3-button w3-right  w3-xlarge w3-circle w3-white w3-card-4"><i class="far fa-star"></i></button>
-
-        </div>
-      </div>
-   </div>
-   <div class="container pt-4">
-      <div class=" w3-card-6 p-4 bg-light text-dark d-flex row">
-        <div class="col-md-6 col-sm-12">
-          <h4>Job title</h4>
-          <p>Job Description</p>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <span class="badge badge-pill p-3 badge-primary">Job duration</span>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <button class=" btn btn-primary w3-round-large w-25 w3-shadow-grey"type="button" name="button"> Apply</button>
-          <button class="w3-button w3-right  w3-xlarge w3-circle w3-white w3-card-4"><i class="far fa-star"></i></button>
-
-        </div>
-      </div>
-   </div>
-<!-- to be removed -->
-
-<div class="container  pt-5 pb-5">
-  <div class="row w3-center">
-    <div class="col-md-4">
-    <button class=" btn w-50 w3-hover-shadow w3-card-2 p-3 w3-border-red pt-3" type="submit" name="button">Prpgraming</button><br><br>
-    <button class=" btn w-50 w3-hover-shadow w3-card-2 p-3 w3-border-red pt-3" type="submit" name="button">Prpgraming</button><br><br>
-    <button class=" btn w-50 w3-hover-shadow w3-card-2 p-3 w3-border-red pt-3" type="submit" name="button">Prpgraming</button><br><br>
-    </div>
-    <div class="col-md-4">
-    <button class=" btn w-50 w3-hover-shadow w3-card-2 p-3 w3-border-red pt-3" type="submit" name="button">Prpgraming</button><br><br>
-    <button class=" btn w-50 w3-hover-shadow w3-card-2 p-3 w3-border-red pt-3" type="submit" name="button">Prpgraming</button><br><br>
-    <button class=" btn w-50 w3-hover-shadow w3-card-2 p-3 w3-border-red pt-3" type="submit" name="button">Prpgraming</button><br><br>
-    </div>
-    <div class="col-md-4">
-    <button class=" btn w-50 w3-hover-shadow w3-card-2 p-3 w3-border-red pt-3" type="submit" name="button">Prpgraming</button><br><br>
-    <button class=" btn w-50 w3-hover-shadow w3-card-2 p-3 w3-border-red pt-3" type="submit" name="button">Prpgraming</button><br><br>
-    <button class=" btn w-50 w3-hover-shadow w3-card-2 p-3 w3-border-red pt-3" type="submit" name="button">Prpgraming</button><br><br>
-    </div>
-  </div>
 
 </div>
 <script type="text/javascript" src="style.js">

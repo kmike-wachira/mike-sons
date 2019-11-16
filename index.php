@@ -14,7 +14,7 @@
   <?php include 'incs/navbar.php';?>
 
 
-<div style="margin-top:250px;font-size:30px">
+<div class="topp">
   <div class="pimg1">
       <div class="ptext">
         <span class="border">

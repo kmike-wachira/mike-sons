@@ -22,7 +22,7 @@
 </head>
 <body>
   <?php include 'incs/navbar.php';?>
-<div class="ml-3 mr-3 w3-center" style="margin-top:250px">
+<div class="ml-3 mr-3 w3-center topp">
   <div class="w3-container w3-cyan">
     <h2>Mike and sons home made products</h2>
     <p>We have some home made products that we make from simple material </p>

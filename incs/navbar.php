@@ -16,6 +16,12 @@
         <a class="nav-link" href="jobs.php">Jobs </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="uploadTender.php">Add Tender</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="addJob.php">Hire</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="login.php">Login</a>
       </li>
       <li class="nav-item">

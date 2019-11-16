@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,26 +10,28 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-  <?php include 'incs/navbar.php';?>
-<div style="margin-top:250px;">
+  <?php include 'incs/navbar1.php';
+  include 'php/connection.php';
+  addjob(); ?>
+<div style="margin-top:80px;">
 
-  <div class="container center">
+  <div class=" topp1 container center">
     <div class="row">
 
       <div class="col-md-2"></div>
-<div class="col-md-8">
-  <div class=" w3-card-4 w3-margin" style="width:70%">
+<div class="col-md-8 col-sm-12">
+  <div class=" w3-card-4" style="width:100%">
     <header class="w3-container w3-center w3-light-grey">
-      <h3>Add A tender</h3>
+      <h3>Hire</h3>
       </header>
       <div class="w3-container">
-        <form class="w3-container">
+        <form class="w3-container" action="" method="post">
 
           <label class="w3-label">Job Title</label>
-          <input class="w3-input" type="text">
+          <input class="w3-input" name="jobtitle" type="text" required>
 
           <label class="w3-label">Job Description</label><br>
-          <textarea class="w3-input" name="jDesc" rows="4" cols="40"></textarea>
+          <textarea class="w3-input" name="jDesc" rows="4" cols="40" required></textarea>
 
           <p>
               <label class="w3-label">Job Category</label><br>
@@ -42,15 +43,15 @@
               <label class="w3-validate">Temporary</label></p>
 
               <label class="w3-label">Vacancies</label>
-              <input class="w3-input" type="number" name="Vacancies" min="1" default="1">
+              <input class="w3-input" type="number" name="Vacancies" min="1" default="1" required>
 
           <label class="w3-label">Salary</label>
-          <input class="w3-input" type="number" name="Salary" min="1000" default="1000">
+          <input class="w3-input" type="number" name="Salary" min="1000" default="1000" required>
 
            <label class="w3-label">Due date</label>
-          <input class="w3-input" type="date" min="10">
+          <input class="w3-input" type="date" name="date" min="10" required>
           <div class="container w3-center p-3">
-            <button type="submit" class="btn btn-succes w3-round-large w3-border-red w3-center " name="addtender">Add Tender</button>
+            <button type="submit" class="btn btn-succes w3-round-large w3-border-red w3-center " name="addjob">Hire</button>
 
           </div>
 

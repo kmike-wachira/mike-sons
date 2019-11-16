@@ -15,6 +15,15 @@ body {
   top: 0;
   z-index: 99;
 }
+.topp{
+  margin-top: 250px;
+}
+.topp1{
+  margin-top: 150px;
+}
+.cimage{
+  height:500px;
+}
 
 #navbar a {
   float: left;
@@ -50,6 +59,12 @@ body {
 @media screen and (max-width: 580px) {
   #navbar {
     padding: 20px 10px !important;
+  }
+  .topp{
+    margin-top: 100px;
+  }
+  .cimage{
+    height: 150px;
   }
   #navbar a {
     float: none;

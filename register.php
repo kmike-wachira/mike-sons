@@ -14,26 +14,29 @@
 </head>
 <body>
 
-  <?php include 'incs/navbar1.php';?>
+  <?php include 'incs/navbar1.php';
+        include 'php/connection.php';
+           register();
+  ?>
 
-<div class="row container" style="margin-top:50px">
+<div class="row ml-2 mr-2" style="margin-top:110px">
   <div class="col-md-3">
   </div>
   <div class="col-md-6 col-sm-12 w3-card-8">
-    <form action="/action_page.php">
+    <form action="" method="post">
   <div class="form-group">
-    <label for="email">Name</label>
-    <input type="email" class="form-control" id="email" placeholder="Enter Name" name="email">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" required>
   </div>
   <div class="form-group">
     <label for="pwd">Email:</label>
-    <input type="text" class="form-control" id="pwd" placeholder="mike$sons@mail.com" name="pswd">
+    <input type="email" class="form-control" id="email" placeholder="mike$sons@mail.com" name="email" required>
   </div>
   <div class="form-group">
     <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
   </div>
-  <div class="form-check-inline">
+  <!-- <div class="form-check-inline">
        <label class="form-check-label" for="radio1">
          <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>User
        </label>
@@ -47,10 +50,10 @@
        <label class="form-check-label">
          <input type="radio" class="form-check-input">Worker
        </label>
-     </div><br>
+     </div><br> -->
      <div class="w3-center">
-       <button type="submit" class="btn btn-primary">Submit</button>
-
+       <input type="submit" class="btn btn-primary" name="register" value="Register">
+       <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
      </div>
 </form>
   </div>

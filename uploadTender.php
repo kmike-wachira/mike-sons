@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,30 +11,32 @@
 </head>
 <body>
 
-  <?php include 'incs/navbar.php';?>
-<div style="margin-top:250px;">
-
-  <div class="container center">
-    <div class="row">
+  <?php
+        include 'incs/navbar1.php';
+        include 'php/connection.php';
+        uploadtender();
+  ?>
+<div style="margin-top:110px;">
+    <div class=" row">
 
       <div class="col-md-2"></div>
 <div class="col-md-8">
-  <div class=" w3-card-4 w3-margin" style="width:70%">
+  <div class=" w3-card-4 w3-margin" style="width:100%">
     <header class="w3-container w3-center w3-light-grey">
       <h3>Add A tender</h3>
       </header>
       <div class="w3-container">
-        <form class="w3-container">
+        <form class="w3-container" action="" method="post">
 
           <label class="w3-label">Tender Name</label>
-          <input class="w3-input" type="text">
+          <input class="w3-input" type="text" required name="title">
 
           <label class="w3-label">Tender Description</label>
-          <textarea class="w3-input" name="TDesc" rows="4" cols="40"></textarea>
+          <textarea class="w3-input" name="TDesc" rows="4" cols="40" required></textarea>
 
           <p>
               <label class="w3-label">Tender Category</label><br>
-            <input class="w3-radio" type="radio" name="Category" value="contract">
+            <input class="w3-radio" type="radio" name="Category" value="contract " >
             <label class="w3-validate">Contract</label></p>
 
             <p>
@@ -43,28 +44,19 @@
               <label class="w3-validate">Product</label></p>
 
           <label class="w3-label">Price</label>
-          <input class="w3-input" type="number" min="10">
+          <input class="w3-input" name="price" type="number" min="10" required>
 
            <label class="w3-label">Due date</label>
-          <input class="w3-input" type="date" min="10">
+          <input class="w3-input" name="date" type="date" required>
           <div class="container w3-center p-3">
             <button type="submit" class="btn btn-success w3-round-large w3-border-red w3-center " name="addtender"> Submit Tender</button>
           </div>
-
-
         </form>
       </div>
-
 </div>
 </div>
-
       <div class="col-md-2"></div>
-
-
-
     </div>
-
-  </div>
 </div>
 
 <script type="text/javascript" src="style.js">

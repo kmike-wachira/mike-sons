@@ -15,7 +15,7 @@
 </head>
 <body class="bg-light">
   <?php include 'incs/navbar.php';?>
-<div class="container-fluid" style="margin-top:250px">
+<div class=" topp container-fluid">
 
 </div>
 
@@ -28,24 +28,24 @@
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/image3.jpg" alt="Los Angeles" width="1100" height="500">
+      <img class="cimage" src="img/tender.jpg" alt="Tender" width="1100" >
       <div class="carousel-caption">
-        <h3>Los Angeles</h3>
-        <p>We had such a great time in LA!</p>
+        <h3>Tender</h3>
+        <p>Aplly for any tender that you feel you can manage.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/image2.jpg" alt="Chicago" width="1100" height="500">
+      <img class="cimage"  src="img/Tenders1.png" alt="Tender" width="1100" >
       <div class="carousel-caption">
-        <h3>Chicago</h3>
-        <p>Thank you, Chicago!</p>
+        <h3>Product</h3>
+        <p> We want those raw materials Apply.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/image1.jpg" alt="New York" width="1100" height="500">
+      <img class="cimage"  src="img/tender.png" alt="New York" width="1100" >
       <div class="carousel-caption">
-        <h3>New York</h3>
-        <p>We love the Big Apple!</p>
+        <h3>Contract</h3>
+        <p>Have skills but no work why dont you try your luck here.</p>
       </div>
     </div>
   </div>
@@ -58,160 +58,7 @@
 </div>
 </div>
 
-<div class="container-fluid w3-container pt-5 pb-5">
-  <div class="row ">
-    <div class="col-md-3 col-sm-12">
-      <div class="w3-card-4" style="width:100%">
-        <img src="img/image1.jpg" alt="Alps" style="width:100%">
-          <div class="w3-container w3-center pb-3">
-            <p>Do you have Lots of maize stock at you place wondering where is  the market wonder no more for we are here for you</p>
-            <p>Wanted in tonnes <span class="w3-badge w3-red">8</span></p>
-            <button class="w3-button w3-block w3-cyan pb-3" onclick="document.getElementById('id01').style.display='block'" style="width:80%">View More and make order</button>
-
-            <!-- My Modal -->
-
-            <div id="id01" class="w3-modal">
-              <div class="w3-modal-content w3-card-4">
-                <header class="w3-container w3-teal">
-                  <span onclick="document.getElementById('id01').style.display='none'"
-                  class="w3-button w3-display-topright">&times;</span>
-                  <h2>Maize tender</h2>
-                </header>
-                <div class="w3-container">
-                  <p>How much maize Do you have in your gallery.Would you like to sell some via a tender .Please Do so for your self</p>
-                  <p>Some text..</p>
-                </div>
-                <footer class="w3-container w3-teal">
-                  <p>Modal Footer</p>
-                </footer>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-
-    <!-- to be removed -->
-    <div class="col-md-3 col-sm-12">
-      <div class="w3-card-4" style="width:100%">
-        <img src="img/image1.jpg" alt="Alps" style="width:100%">
-          <div class="w3-container w3-center pb-3">
-            <p>Do you have Lots of maize stock at you place wondering where is  the market wonder no more for we are here for you</p>
-            <p>Wanted in tonnes <span class="w3-badge w3-red">8</span></p>
-            <button class="w3-button w3-block w3-cyan pb-3" onclick="document.getElementById('id01').style.display='block'" style="width:80%">View More and make order</button>
-
-            <!-- My Modal -->
-
-            <div id="id01" class="w3-modal">
-              <div class="w3-modal-content w3-card-4">
-                <header class="w3-container w3-teal">
-                  <span onclick="document.getElementById('id01').style.display='none'"
-                  class="w3-button w3-display-topright">&times;</span>
-                  <h2>Maize tender</h2>
-                </header>
-                <div class="w3-container">
-                  <p>How much maize Do you have in your gallery.Would you like to sell some via a tender .Please Do so for your self</p>
-                  <p>Some text..</p>
-                </div>
-                <footer class="w3-container w3-teal">
-                  <p>Modal Footer</p>
-                </footer>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-12">
-      <div class="w3-card-4" style="width:100%">
-        <img src="img/image1.jpg" alt="Alps" style="width:100%">
-          <div class="w3-container w3-center pb-3">
-            <p>Do you have Lots of maize stock at you place wondering where is  the market wonder no more for we are here for you</p>
-            <p>Wanted in tonnes <span class="w3-badge w3-red">8</span></p>
-            <button class="w3-button w3-block w3-cyan pb-3" onclick="document.getElementById('id01').style.display='block'" style="width:80%">View More and make order</button>
-
-            <!-- My Modal -->
-
-            <div id="id01" class="w3-modal">
-              <div class="w3-modal-content w3-card-4">
-                <header class="w3-container w3-teal">
-                  <span onclick="document.getElementById('id01').style.display='none'"
-                  class="w3-button w3-display-topright">&times;</span>
-                  <h2>Maize tender</h2>
-                </header>
-                <div class="w3-container">
-                  <p>How much maize Do you have in your gallery.Would you like to sell some via a tender .Please Do so for your self</p>
-                  <p>Some text..</p>
-                </div>
-                <footer class="w3-container w3-teal">
-                  <p>Modal Footer</p>
-                </footer>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-12">
-      <div class="w3-card-4" style="width:100%">
-        <img src="img/image1.jpg" alt="Alps" style="width:100%">
-          <div class="w3-container w3-center pb-3">
-            <p>Do you have Lots of maize stock at you place wondering where is  the market wonder no more for we are here for you</p>
-            <p>Wanted in tonnes <span class="w3-badge w3-red">8</span></p>
-            <button class="w3-button w3-block w3-cyan pb-3" onclick="document.getElementById('id01').style.display='block'" style="width:80%">View More and make order</button>
-
-            <!-- My Modal -->
-
-            <div id="id01" class="w3-modal">
-              <div class="w3-modal-content w3-card-4">
-                <header class="w3-container w3-teal">
-                  <span onclick="document.getElementById('id01').style.display='none'"
-                  class="w3-button w3-display-topright">&times;</span>
-                  <h2>Maize tender</h2>
-                </header>
-                <div class="w3-container">
-                  <p>How much maize Do you have in your gallery.Would you like to sell some via a tender .Please Do so for your self</p>
-                  <p>Some text..</p>
-                </div>
-                <footer class="w3-container w3-teal">
-                  <p>Modal Footer</p>
-                </footer>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-12 pt-3">
-      <div class="w3-card-4" style="width:100%">
-        <img src="img/image1.jpg" alt="Alps" style="width:100%">
-          <div class="w3-container w3-center pb-3">
-            <p>Do you have Lots of maize stock at you place wondering where is  the market wonder no more for we are here for you</p>
-            <p>Wanted in tonnes <span class="w3-badge w3-red">8</span></p>
-            <button class="w3-button w3-block w3-cyan pb-3" onclick="document.getElementById('id01').style.display='block'" style="width:80%">View More and make order</button>
-
-            <!-- My Modal -->
-
-            <div id="id01" class="w3-modal">
-              <div class="w3-modal-content w3-card-4">
-                <header class="w3-container w3-teal">
-                  <span onclick="document.getElementById('id01').style.display='none'"
-                  class="w3-button w3-display-topright">&times;</span>
-                  <h2>Maize tender</h2>
-                </header>
-                <div class="w3-container">
-                  <p>How much maize Do you have in your gallery.Would you like to sell some via a tender .Please Do so for your self</p>
-                  <p>Some text..</p>
-                </div>
-                <footer class="w3-container w3-teal">
-                  <p>Modal Footer</p>
-                </footer>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-
-    <!-- for looping thro -->
-  </div>
-
-</div>
+<?php include 'php/fetchtenders.php'; ?>
 
 
 <script type="text/javascript" src="style.js">

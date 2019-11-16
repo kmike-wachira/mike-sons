@@ -14,15 +14,19 @@
 </head>
 <body>
 
-  <?php include 'incs/navbar1.php';?>
+  <?php include 'incs/navbar1.php';
+  include 'php/connection.php';
+  Login();
 
-<div class="row container" style="margin-top:50px">
-  <div class="col-md-4">
+  ?>
+
+<div class="row mr-2 ml-2" style="margin-top:110px">
+  <div class="col-md-3">
   </div>
   <div class="col-md-6 col-sm-12 w3-card-8">
-    <form action="/action_page.php">
+    <form action="" method="post">
   <div class="form-group">
-    <label for="email">Email:</label>
+    <label for="email">Username:</label>
     <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
   </div>
   <div class="form-group">
@@ -35,13 +39,13 @@
     </label>
   </div>
   <div class="w3-center">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" name="login">Login</button>
 
 
   </div>
 </form>
   </div>
-  <div class="col-md-2">
+  <div class="col-md-3">
   </div>
 
 </div>
