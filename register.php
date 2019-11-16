@@ -14,12 +14,12 @@
 </head>
 <body>
 
-  <?php include 'incs/navbar.php';?>
+  <?php include 'incs/navbar1.php';?>
 
-<div class="row container" style="margin-top:250px">
+<div class="row container" style="margin-top:50px">
   <div class="col-md-3">
   </div>
-  <div class="col-md-6 col-sm-12">
+  <div class="col-md-6 col-sm-12 w3-card-8">
     <form action="/action_page.php">
   <div class="form-group">
     <label for="email">Name</label>
@@ -47,8 +47,11 @@
        <label class="form-check-label">
          <input type="radio" class="form-check-input">Worker
        </label>
+     </div><br>
+     <div class="w3-center">
+       <button type="submit" class="btn btn-primary">Submit</button>
+
      </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
   </div>
   <div class="col-md-3">

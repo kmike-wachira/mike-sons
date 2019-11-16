@@ -14,12 +14,12 @@
 </head>
 <body>
 
-  <?php include 'incs/navbar.php';?>
+  <?php include 'incs/navbar1.php';?>
 
-<div class="row container" style="margin-top:250px">
-  <div class="col-md-3">
+<div class="row container" style="margin-top:50px">
+  <div class="col-md-4">
   </div>
-  <div class="col-md-6 col-sm-12">
+  <div class="col-md-6 col-sm-12 w3-card-8">
     <form action="/action_page.php">
   <div class="form-group">
     <label for="email">Email:</label>
@@ -34,10 +34,14 @@
       <input class="form-check-input" type="checkbox" name="remember"> Remember me
     </label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="w3-center">
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+  </div>
 </form>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-2">
   </div>
 
 </div>
