@@ -32,7 +32,6 @@ if ($resultset->num_rows > 0) {
               </div>
               <div class="col-sm-12 col-md-4">
               <h3>Price: '.$jobprice.'</h3>
-
               </div>
              </div>
          </div>';
