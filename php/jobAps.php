@@ -9,6 +9,8 @@ if ($resultset->num_rows > 0) {
     // output data of each row
     while($row = $resultset->fetch_assoc()) {
      // read from jobs
+     $jobstate=$row['state'];
+     
      $jobid=$row['jobid'];
      $tvalue ="SELECT `id`, `job-title`, `job-desc`, `vacancies`, `salary`, `category`, `due-date`, `organisation`,`state` FROM `Jobs` WHERE `id`='$jobid'";
      $tset = $connect2->query($tvalue);
@@ -18,7 +20,6 @@ if ($resultset->num_rows > 0) {
          $jobN=$row['job-title'];
          $joborg=$row['organisation'];
          $tendecate=$row['category'];
-         $jobstate=$row['state'];
          $jobprice=$row['salary'];
       echo'   <div class="container p-3 mt-3 bg-light" >
            <div class="row mr-2 ml-2 well">

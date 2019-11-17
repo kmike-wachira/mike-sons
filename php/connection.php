@@ -14,6 +14,19 @@ if ($conn->connect_error) {
 // echo "Connected succesfully";
 return $conn;
 }
+function getPersonna($id){
+  $conn=connect();
+  $login ="SELECT `id`, `name`, `email`, `password` FROM `Users` WHERE `id`='$id'";
+  $resultset = $conn->query($login);
+if ($resultset->num_rows > 0) {
+    while($row = $resultset->fetch_assoc()) {
+     $name=$row['name'];
+    }
+} else {
+    echo "User Not found";
+}
+return $name;
+}
 // add tender
 function uploadtender(){
   $conn=connect();
@@ -35,6 +48,48 @@ function uploadtender(){
             }
           }
         }
+        function updateTenders($idn){
+          $conn=connect();
+          $approve="approve".$idn;
+          $disapprove="Disapprove".$idn;
+
+          if(isset($_POST[$approve])){
+          $sql = "UPDATE `Apply tender` SET `state`='1' WHERE `id`='$idn' ";
+          if ($conn->query($sql) === TRUE) {
+            // echo "Record updated successfully";
+          } else {
+              echo "Error updating record: " . $conn->error;
+              }
+            }else if(isset($_POST[$disapprove])){
+              $sql = "UPDATE `Apply tender` SET `state`= '2' WHERE `id`='$idn' ";
+                if ($conn->query($sql) === TRUE) {
+                // echo "Record updated successfully";
+                }else {
+                    echo "Error updating record: " . $conn->error;
+                }
+                }
+            }
+
+            function updateJobs($idn){
+              $conn=connect();
+              $disapprove="Disapprove".$idn;              
+              $approve="approve".$idn;
+              if(isset($_POST[$approve])){
+              $sql = "UPDATE `Apply job` SET `state`= '1' WHERE `id`='$idn' ";
+              if ($conn->query($sql) === TRUE) {
+                // echo "Record updated successfully";
+              } else {
+                  echo "Error updating record: " . $conn->error;
+                  }
+                } else if(isset($_POST[$disapprove])){
+                    $sql = "UPDATE `Apply job` SET `state`= '2' WHERE `id`='$idn' ";
+                    if ($conn->query($sql) === TRUE) {
+                      // echo "Record updated successfully";
+                    } else {
+                        echo "Error updating record: " . $conn->error;
+                        }
+                      }
+                }
 // Register
 function register(){
   $conn=connect();

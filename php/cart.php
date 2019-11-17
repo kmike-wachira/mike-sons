@@ -9,6 +9,7 @@ if ($resultset->num_rows > 0) {
     // output data of each row
     while($row = $resultset->fetch_assoc()) {
      // read from tenders
+      $tenderstate=$row['state'];
      $tenderid=$row['tenderid'];
      $tvalue ="SELECT `id`, `tender_name`, `tender_description`, `category`, `due_date`, `price`, `org`, `state` FROM `tenders` WHERE `id`='$tenderid'";
      $tset = $connect1->query($tvalue);
@@ -18,7 +19,6 @@ if ($resultset->num_rows > 0) {
          $tenderN=$row['tender_name'];
          $tenderorg=$row['org'];
          $tendecate=$row['category'];
-         $tenderstate=$row['state'];
          $tenderprice=$row['price'];
       echo'   <div class="container p-3 mt-3 bg-light" >
            <div class="row mr-2 ml-2 well">
