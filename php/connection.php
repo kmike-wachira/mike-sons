@@ -72,7 +72,7 @@ function uploadtender(){
 
             function updateJobs($idn){
               $conn=connect();
-              $disapprove="Disapprove".$idn;              
+              $disapprove="Disapprove".$idn;
               $approve="approve".$idn;
               if(isset($_POST[$approve])){
               $sql = "UPDATE `Apply job` SET `state`= '1' WHERE `id`='$idn' ";
