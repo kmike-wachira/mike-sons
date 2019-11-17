@@ -1,0 +1,18 @@
+DELIMITER //
+
+CREATE PROCEDURE setTenderState(
+    IN id INT  , IN state INT
+)
+BEGIN
+	DECLARE tenderstatus VARCHAR(30);
+  IF state=0 THEN
+        SET tenderstatus = 'Not attended to';
+    ELSEIF state=1 THEN
+        SET tenderstatus = 'Tender approved';
+    ELSE
+        SET tenderstatus = 'REJECTED';
+    END IF;
+   UPDATE `Apply job` SET `state`=tenderstatus WHERE `id`=id;
+END //
+
+DELIMITER ;
