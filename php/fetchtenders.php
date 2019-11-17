@@ -2,6 +2,7 @@
 include 'connection.php';
 $conn=connect();
 
+
 $tender ="SELECT  * FROM `tenders`";
 $resultset = $conn->query($tender);
 if ($resultset->num_rows > 0) {
@@ -16,6 +17,8 @@ if ($resultset->num_rows > 0) {
   $category=$row['category'];
   $date=$row['due_date'];
   $organisation=$row['org'];
+  $id=$_SESSION['id'];
+  addTender($id,$tenderid);
 
   echo '
   <div class="col-md-3 col-sm-12">
@@ -51,9 +54,8 @@ if ($resultset->num_rows > 0) {
           <p>Organisation :' .$organisation.'</p><br>
           <p> Deadline :'.$date.'</p><br>
           <div class="w3-center">
-            <button type="submit" class="btn btn-succes w3-round-large w3-border-red w3-center " name="addjob">Take Tender</button>
+            <button type="submit" class="btn btn-succes w3-round-large w3-border-red w3-center " name="'.$tenderid.'">Take Tender</button>
           </div>
-
           </form>
         </div>
 

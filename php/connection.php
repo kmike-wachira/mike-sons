@@ -24,8 +24,9 @@ function uploadtender(){
     $category=$_POST['Category'];
     $price=$_POST['price'];
     $date=$_POST['date'];
+    $org=$_SESSION['username'];
     $uploadtender = "INSERT INTO `tenders`(`tender_name`, `tender_description`, `category`, `due_date`, `price`, `org`, `state`)
-                  VALUES ('$tn','$td','$category','$date','$price','1','0')";
+                  VALUES ('$tn','$td','$category','$date','$price','$org','0')";
 
             if ($conn->query($uploadtender) === TRUE) {
               // echo "Tender Uploaded successfuly";
@@ -59,10 +60,10 @@ function addjob(){
     $salary=$_POST['Salary'];
     $vacancies=$_POST['Vacancies'];
     $date=$_POST['date'];
-
+  $org=$_SESSION['username'];
 $conn=connect();
 $addjob = "INSERT INTO `Jobs`(`job-title`, `job-desc`, `vacancies`, `salary`, `category`, `due-date`, `organisation`)
-VALUES ('$jobtitle','$jobdesc','$vacancies','$salary','$category','$date','1')";
+VALUES ('$jobtitle','$jobdesc','$vacancies','$salary','$category','$date','$org','0')";
 if ($conn->query($addjob) === TRUE) {
 
 } else {
@@ -70,6 +71,8 @@ if ($conn->query($addjob) === TRUE) {
 }
 }
 }
+
+
 
 // Login
 
@@ -84,6 +87,8 @@ function Login(){
 if ($resultset->num_rows > 0) {
     // output data of each row
     while($row = $resultset->fetch_assoc()) {
+       $_SESSION['id']=$row['id'];
+       $_SESSION['username']=$row['email'];
        header('Location:index.php');
     }
 } else {
@@ -92,4 +97,31 @@ if ($resultset->num_rows > 0) {
 }
 }
 
+// apply tender
+function addTender($user,$tenderid){
+  if(isset($_POST[$tenderid])){
+    $conn=connect();
+    $tender ="INSERT INTO `Apply tender`(`tenderid`, `personnaid`, `state`) VALUES ('$tenderid','$user','0')";
+    if ($conn->query($tender) === TRUE) {
+
+    } else {
+        echo "Error: " . $tenderid. "<br>" . $conn->error;
+    }
+
+}
+}
+
+// apply job
+function applyJob($user,$jobid){
+  if(isset($_POST[$jobid])){
+    $conn=connect();
+    $job ="INSERT INTO`Apply job`(`jobid`, `personaid`, `state`) VALUES ('$jobid','$user','0')";
+    if ($conn->query($job) === TRUE) {
+
+    } else {
+        echo "Error: " . $jobid. "<br>" . $conn->error;
+    }
+
+}
+}
 ?>

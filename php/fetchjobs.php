@@ -1,4 +1,7 @@
 <?php
+  session_start();
+ ?>
+<?php
 include 'connection.php';
 $conn=connect();
 
@@ -15,6 +18,10 @@ if ($resultset->num_rows > 0) {
   $salary=$row['salary'];
   $category=$row['category'];
   $date=$row['due-date'];
+  if(isset($_SESSION['id'])){
+    $id=$_SESSION['id'];
+    applyJob($id,$jobid);
+  }
   $organisation=$row['organisation'];
     echo '<div class="container pt-4">';
   echo ' <div class=" w3-card-6 p-4 bg-light text-dark d-flex row">
@@ -49,7 +56,7 @@ if ($resultset->num_rows > 0) {
         <p> You want to apply for this '.$jobtitle. '  job .Click the apply button to apply and more details will be availed to your email once approved.
         it will take less than 1 hour to be reached out. </p><br>
         <div class="w3-center">
-          <button type="submit" name="apply" class="w3-red w3-round-large btn w3-border-brown w3-border"> Apply</button>
+          <button type="submit" name="'.$jobid.'" class="w3-red w3-round-large btn w3-border-brown w3-border"> Apply</button>
           </div>
 
 

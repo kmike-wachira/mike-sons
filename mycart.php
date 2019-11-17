@@ -17,38 +17,22 @@
 <body>
 
   <?php include 'incs/navbar1.php';
-  include 'php/connection.php';
-  Login();
+  // Login();
 
   ?>
+  <div class="well w3-center p-2" style="margin-top:90px;background-color:#ccccff;">
+ <h2>Contracts</h2>
+  </div>
+  <?php
+    // include 'php/connection.php';
+     include 'php/cart.php'; ?>
 
-<div class="row mr-2 ml-2" style="margin-top:110px">
-  <div class="col-md-3">
-  </div>
-  <div class="col-md-6 col-sm-12 w3-card-8">
-    <form action="" method="post">
-  <div class="form-group">
-    <label for="email">Username:</label>
-    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-  </div>
-  <div class="form-group">
-    <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-  </div>
-  <div class="form-group form-check">
-    <label class="form-check-label">
-      <input class="form-check-input" type="checkbox" name="remember"> Remember me
-    </label>
-  </div>
-  <div class="w3-center">
-    <button type="submit" class="btn btn-primary" name="login">Login</button>
-
-
-  </div>
-</form>
-  </div>
-  <div class="col-md-3">
-  </div>
+<div class="well w3-center p-2" style="margin-top:90px;background-color:#ccccff;">
+<h2>Jobs</h2>
+</div>
+<?php
+  // include 'php/connection.php';
+   include 'php/jobAps.php'; ?>
 
 </div>
 <script type="text/javascript" src="style.js"></script>

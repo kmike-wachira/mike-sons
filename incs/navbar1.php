@@ -20,6 +20,9 @@
       <li class="nav-item">
         <a class="nav-link" href="addJob.php">Hire</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mycart.php">Cart</a>
+      </li>
       <li class="nav-item w3-right">
         <a class="nav-link" href="login.php">Login</a>
       </li>
