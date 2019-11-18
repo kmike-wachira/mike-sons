@@ -16,7 +16,7 @@ return $conn;
 }
 function getPersonna($id){
   $conn=connect();
-  $login ="SELECT `id`, `name`, `email`, `password` FROM `Users` WHERE `id`='$id'";
+  $login ="CALL persona('$id')";
   $resultset = $conn->query($login);
 if ($resultset->num_rows > 0) {
     while($row = $resultset->fetch_assoc()) {
@@ -39,7 +39,7 @@ function uploadtender(){
     $date=$_POST['date'];
     $org=$_SESSION['username'];
     $uploadtender = "INSERT INTO `tenders`(`tender_name`, `tender_description`, `category`, `due_date`, `price`, `org`, `state`)
-                  VALUES ('$tn','$td','$category','$date','$price','$org','0')";
+                      VALUES ('$tn','$td','$category','$date','$price','$org','0')";
 
             if ($conn->query($uploadtender) === TRUE) {
               // echo "Tender Uploaded successfuly";

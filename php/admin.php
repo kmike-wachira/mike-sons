@@ -72,7 +72,6 @@ function showTender(){
         $userid=$row['personnaid'];
         $name=getPersonna($userid);
         $tenderstate=$row['state'];
-
        // read from tenders
        $tenderid=$row['tenderid'];
        $tvalue ="SELECT `id`, `tender_name`, `tender_description`, `category`, `due_date`, `price`, `org`, `state` FROM `tenders` WHERE `id`='$tenderid'";
@@ -85,7 +84,7 @@ function showTender(){
            $tendecate=$row['category'];
            $tenderprice=$row['price'];
            updateTenders($appid);
-        echo'   <div class="container p-3 mt-3 bg-light" >
+        echo'<div class="container p-3 mt-3 bg-light" >
              <div class="row mr-2 ml-2 well">
                 <div class="col-sm-12 col-md-5">
                 <h3>Title: '.$tenderN.'</h3>
