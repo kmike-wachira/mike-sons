@@ -122,9 +122,142 @@ function showTender(){
 
 
 }
+function dbtablesoper(){
+// include 'connection.php';
+$connw=connect();
 
-// $connect1.close()
+  $sql = "SHOW TABLES";
+  $resultsetq = $connw->query($sql);
+  echo '<table class=" w3-centered w3-table-all w3-hoverable">
+     <thead>
+       <tr class="w3-light-grey">
+         <th>Table Name</th>
+         <th>Backup</th>
+       </tr>
+     </thead>';
+  while ($rowa =$resultsetq->fetch_row()) {
+    // backupTable($rowa[0]);
+    echo '
+     <tr>
+      <form class="form" action="" method="post">
+        <td class="w3-center">'.$rowa[0].'</td>
+        <td class="w3-center"><button type="submit" class="btn w3-white w3-red w3-round-large" name='.$rowa[0].'>Backup</button> </td>
+      </form>
+    </tr>';
+  }
+
+}
+function backupTable(){
+  // $conn=connect();
+  // $tn=`$tablename`;
+    // $filename=$tablename.date("Y-m-d h:i:sa").".sql";
+    // if(isset($_POST[$tablename])){
+       if(isset($_POST["Backup"])){
+          $mysqlDatabaseName ='mikesons';
+          $mysqlUserName ='root';
+          $mysqlPassword ='35287193';
+          $mysqlHostName ='localhost';
+          $mysqlExportPath ="backups/mikesons".date( "d-m-Y--h-i-s").".sql";
+
+          //Please do not change the following points
+          //Export of the database and output of the status
+          $command='mysqldump --opt -h' .$mysqlHostName .' -u' .$mysqlUserName .' -p' .$mysqlPassword .' ' .$mysqlDatabaseName .' > ' .$mysqlExportPath;
+          $output=array();
+          exec($command,$output,$worked);
+          switch($worked){
+          case 0:
+          echo 'The database <b>' .$mysqlDatabaseName .'</b> was successfully stored in the following path '.getcwd().'/' .$mysqlExportPath .'</b>';
+          break;
+          case 1:
+          echo 'An error occurred when exporting <b>' .$mysqlDatabaseName .'</b> zu '.getcwd().'/' .$mysqlExportPath .'</b>';
+          break;
+          case 2:
+          echo 'An export error has occurred, please check the following information: <br/><br/><table><tr><td>MySQL Database Name:</td><td><b>' .$mysqlDatabaseName .'</b></td></tr><tr><td>MySQL User Name:</td><td><b>' .$mysqlUserName .'</b></td></tr><tr><td>MySQL Password:</td><td><b>NOTSHOWN</b></td></tr><tr><td>MySQL Host Name:</td><td><b>' .$mysqlHostName .'</b></td></tr></table>';
+          break;
+// }
+}
+}
+}
+   function listBackups(){
+     $dir = "C:\/Apache24\/htdocs\/dev\/mike-sons\/backups\/";
+     if(isset($_POST["readfile"])){
+       $files=scandir($dir);
+      	echo '<form class="p-5" method="post" action="">
+        <select name="dbname" class="custom-select">Database to Restore';
+      		foreach ($files as $file){
+      			if ($file == "." || $file == "..") continue;
+			         echo "<option>$file</option>
+               ";
+		           }
+    echo '</select>
+    <button class="w3-border-red w3-white w3-round-large p-2" type="submit" name="restore">restore</button>
+    </form>';
+    restoredb();
+}
+}
+function restoredb(){
+          if(isset($_POST["restore"])){
+            $db=$_POST['dbname'];
+            $mysqlDatabaseName ='mikesons';
+            $mysqlUserName ='root';
+            $mysqlPassword ='35287193';
+            $mysqlHostName ='localhost';
+            $mysqlImportFilename ='./backups/'.$db;
+
+            //Please do not change the following points
+            //Import of the database and output of the status
+            $command='mysql -h' .$mysqlHostName .' -u' .$mysqlUserName .' -p' .$mysqlPassword .' ' .$mysqlDatabaseName .' < ' .$mysqlImportFilename;
+              $output=array();
+            exec($command,$output,$worked);
+            switch($worked){
+            case 0:
+            // echo 'The data from the file <b>' .$mysqlImportFilename .'</b> were successfully imported into the database <b>' .$mysqlDatabaseName .'</b>';
+            break;
+            case 1:
+            echo 'An error occurred during the import. Please check if the file is in the same folder as this script. Also check the following data again:<br/><br/><table><tr><td>MySQL Database Name:</td><td><b>' .$mysqlDatabaseName .'</b></td></tr><tr><td>MySQL User Name:</td><td><b>' .$mysqlUserName .'</b></td></tr><tr><td>MySQL Password:</td><td><b>NOTSHOWN</b></td></tr><tr><td>MySQL Host Name:</td><td><b>' .$mysqlHostName .'</b></td></tr><tr><td>MySQL Import Dateiname:</td><td><b>' .$mysqlImportFilename .'</b></td></tr></table>';
+            break;
+          }
+        }
+      }
+
+      function restoreDatabaseTables($dbHost, $dbUsername, $dbPassword, $dbName, $filePath){
+          $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+          $templine = '';
+          $lines = file($filePath);
+          $error = '';
+          foreach ($lines as $line){
+              if(substr($line, 0, 2) == '--' || $line == '') continue;
+              $templine .= $line;
+              if (substr(trim($line), -1, 1) == ';'){
+                  if(!$db->query($templine)){
+                      $error .= 'Error performing query "<b>' . $templine . '</b>": ' . $db->error . '<br /><br />';
+                  }
+                  $templine = '';
+              }
+          }
+          return !empty($error)?$error:true;
+      }
+
+   //backup
+   function backup()
+   {
+     if(isset($_POST["Backup"])){
+       $dir = "C:\/Apache24\/htdocs\/dev\/mike-sons\/backups\/";
+        global $dir;
+      $params = array(
+          'db_host'=> 'localhost',
+          'db_uname' => 'root',
+          'db_password' => '35287193',
+          'db_to_backup' => 'mikesons',
+          'db_backup_path' => $GLOBALS['dir'],
+          'db_exclude_tables' => array('wp_comments','wp_w3tc_cdn_queue')
+      );
+      backup_mysql_database($params);
+  }
+   }
 
 
 
- ?>
+restoredb();
+
+?>
