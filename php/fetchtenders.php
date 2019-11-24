@@ -17,8 +17,10 @@ if ($resultset->num_rows > 0) {
   $category=$row['category'];
   $date=$row['due_date'];
   $organisation=$row['org'];
-  $id=$_SESSION['id'];
-  addTender($id,$tenderid);
+  if(isset($_SESSION['id'])){
+    $id=$_SESSION['id'];
+    addTender($id,$tenderid);
+  }
 
   echo '
   <div class="col-md-3 col-sm-12">

@@ -116,8 +116,8 @@ function addjob(){
     $vacancies=$_POST['Vacancies'];
     $date=$_POST['date'];
   $org=$_SESSION['username'];
-$conn=connect();
-$addjob = "INSERT INTO `Jobs`(`job-title`, `job-desc`, `vacancies`, `salary`, `category`, `due-date`, `organisation`)
+    $conn=connect();
+      $addjob = "INSERT INTO `Jobs`(`job-title`, `job-desc`, `vacancies`, `salary`, `category`, `due-date`, `organisation`)
 VALUES ('$jobtitle','$jobdesc','$vacancies','$salary','$category','$date','$org','0')";
 if ($conn->query($addjob) === TRUE) {
 
@@ -135,22 +135,21 @@ function Login(){
   if(isset($_POST['login'])){
     $email=$_POST['email'];
     $password=$_POST['pswd'];
-  $conn=connect();
-  $login ="SELECT * FROM `Users` WHERE `email`='$email' AND `password`= '$password' ";
-  $resultset = $conn->query($login);
-
-if ($resultset->num_rows > 0) {
-    // output data of each row
-    while($row = $resultset->fetch_assoc()) {
-       $_SESSION['id']=$row['id'];
-       $_SESSION['username']=$row['email'];
-       header('Location:index.php');
-    }
-} else {
-    echo "User Not found";
-}
-}
-}
+    $conn=connect();
+    $login ="SELECT * FROM `Users` WHERE `email`='$email' AND `password`= '$password' ";
+    $resultset = $conn->query($login);
+      if ($resultset->num_rows > 0) {
+        // output data of each row
+          while($row = $resultset->fetch_assoc()) {
+             $_SESSION['id']=$row['id'];
+             $_SESSION['username']=$row['email'];
+                header('Location:index.php');
+              }
+       } else {
+         echo "User Not found";
+       }
+      }
+  }
 
 // apply tender
 function addTender($user,$tenderid){

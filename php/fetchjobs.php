@@ -1,7 +1,4 @@
 <?php
-  session_start();
- ?>
-<?php
 include 'connection.php';
 $conn=connect();
 
@@ -34,7 +31,7 @@ if ($resultset->num_rows > 0) {
     </div> <br>
     <div class="col-md-3 col-sm-12 w3-center">
       <button class=" btn btn-primary w3-round-large w-25 w3-shadow-grey"type="button" data-toggle="modal" data-target="#'.$jobtitle.$jobid.'" name="button"> Apply</button> <br>
-      <button class="w3-button w3-right  w3-xlarge w3-circle w3-white w3-card-4"><i class="far fa-star"></i></button>
+      <button class="w3-button w3-orange  w3-xlarge w3-circle w3-white w3-card-4"><i class="far fa-star"></i></button>
     </div>
   </div>
   </div>

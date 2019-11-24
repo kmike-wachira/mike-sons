@@ -25,7 +25,7 @@
 
     <section class="section section-light">
       <h2 class="pt-3">Who we are</h2>
-      <p>
+      <p style="font-size:24px">
         Mike and sons is a family organisation started for the purpose of developing our own company. We are really focussing on gathering forms of income for
         us as well as our clents. We offer this by selling our very own home  products as well as job and tender hunting for our clients.
       </p>
@@ -33,7 +33,7 @@
 
     <div class="pimg2">
       <div class="ptext">
-        <span class="border trans">
+        <span class="border trans w3-black" >
           you for us for you
         </span>
       </div>
@@ -41,7 +41,7 @@
 
     <section class="section section-dark">
       <h2>Home Made products</h2>
-      <p>
+      <p style="font-size:24px">
         We have made our very own product varying in type and in season.We majorly focus on Edible products like yoghurt,milkshake,crisps ,pop corns pizza and so many more .
         we also deliver in less than one our due to perishablity.<a href="homecart.html">View our products here.</a>
       </p>
@@ -49,7 +49,7 @@
 
     <div class="pimg3">
       <div class="ptext">
-        <span class="border trans">
+        <span class="border trans w3-black" >
         Thinking about you
         </span>
       </div>
@@ -57,7 +57,7 @@
 
     <section class="section section-light">
       <h2> Tenders</h2>
-      <p>
+      <p style="font-size:24px">
       Its not always possible to have everyone who has gone through class to be employed.Some opt to start their own small merchandise or business hence rise of
       of supply of product .Here we help you to get into contact with available supply and contract tenders.<a href="tender.html">View Other tenders</a>
       </p>
@@ -65,7 +65,7 @@
 
     <div class="pimg3">
       <div class="ptext">
-        <span class="border trans">
+        <span class="border trans w3-black" >
         1000 successful tenders
         </span>
       </div>
@@ -73,7 +73,7 @@
 
     <section class="section section-dark">
       <h2>Jobs</h2>
-      <p>
+      <p style="font-size:24px">
       How difficult is it to find a place where you can get you daily meal from. View current Jobs around Contact us to help you get the link you might need
       to start off.<a href="tender.html">Apply here</a>
       </p>
