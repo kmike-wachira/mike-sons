@@ -98,8 +98,8 @@ function showTender(){
                 <div class="col-sm-12 col-md-4">
                 <h3>Price: '.$tenderprice.'</h3>
                 <form class="form" action="" method="post">
-                  <button type="submit"class="btn btn-success" name="approve'.$appid.'"> Approve</button>
-                  <button type="submit"class="btn btn-danger" name="Disapprove'.$appid.'"> Disapprove</button>
+                  <button type="submit"class="btn btn-success" name="Tapprove'.$appid.'"> Approve</button>
+                  <button type="submit"class="btn btn-danger" name="TDisapprove'.$appid.'"> Disapprove</button>
                 </form>
 
                 </div>

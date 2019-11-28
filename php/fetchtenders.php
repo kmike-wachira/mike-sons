@@ -33,7 +33,6 @@ if ($resultset->num_rows > 0) {
           <!-- <span class="w3-badge w3-red">8</span> -->
           <p>Category : '.$category.'</p>
           <button class="w3-button w3-block w3-cyan pb-3" data-toggle="modal" data-target="#id'.$tenderid.'" style="width:80%">View More and make order</button>
-
         </div>
     </div>
   </div>

@@ -17,12 +17,12 @@
 <body>
 
   <?php
-    // include 'incs/navbar1.php';
+    include 'incs/adminNav.php';
     include 'php/admin.php';
   // Login();
 
   ?>
-  <div class="well w3-center p-2" style="margin-top:90px;background-color:#ccccff;">
+  <div class=" well w3-center p-2" style="margin-top:250px;background-color:#ccccff;">
  <h2>Contracts</h2>
   </div>
   <?php
@@ -45,7 +45,7 @@ showJobs();
    <div class="col-md-5">
      <form class="" action="" method="post">
        <button class="w3-border-red w3-white w3-round-large p-2" type="submit" name="Backup">Backup database</button>
-       <button class="w3-border-red w3-white w3-round-large p-2" type="submit" name="readfile">Read</button>
+       <button class="w3-border-red w3-white w3-round-large p-2 pb-5" type="submit" name="readfile">View Backups</button>
 
      </form>
    </div>

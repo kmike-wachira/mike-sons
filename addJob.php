@@ -15,7 +15,7 @@
   addjob(); ?>
 <div style="margin-top:80px;">
 
-  <div class=" topp1 container center">
+  <div class=" container center">
     <div class="row">
 
       <div class="col-md-2"></div>

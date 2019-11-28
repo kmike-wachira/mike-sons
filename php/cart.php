@@ -3,7 +3,7 @@ include 'connection.php';
 // include 'connection.php';
   $connect1=connect();
   $userid=$_SESSION['id'];
-  $mytender ="SELECT `id`, `tenderid`, `personnaid`, `state` FROM `Apply tender` WHERE `personnaid`='$userid'";
+  $mytender ="SELECT `id`, `tenderid`, `personnaid`, Cartstatus(state) as state FROM `Apply tender` WHERE `personnaid`='$userid'";
   $resultset = $connect1->query($mytender);
 if ($resultset->num_rows > 0) {
     // output data of each row

@@ -3,14 +3,14 @@
 // include 'connection.php';
   $connect2=connect();
   $userid=$_SESSION['id'];
-  $myjob ="SELECT `id`, `jobid`, `personaid`, `state` FROM `Apply job` WHERE `personaid`='$userid'";
+  $myjob ="SELECT `id`, `jobid`, `personaid`, Cartstatus(state) as state  FROM `Apply job` WHERE `personaid`='$userid'";
   $resultset = $connect2->query($myjob);
 if ($resultset->num_rows > 0) {
     // output data of each row
     while($row = $resultset->fetch_assoc()) {
      // read from jobs
      $jobstate=$row['state'];
-     
+
      $jobid=$row['jobid'];
      $tvalue ="SELECT `id`, `job-title`, `job-desc`, `vacancies`, `salary`, `category`, `due-date`, `organisation`,`state` FROM `Jobs` WHERE `id`='$jobid'";
      $tset = $connect2->query($tvalue);

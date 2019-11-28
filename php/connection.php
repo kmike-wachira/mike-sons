@@ -50,8 +50,8 @@ function uploadtender(){
         }
         function updateTenders($idn){
           $conn=connect();
-          $approve="approve".$idn;
-          $disapprove="Disapprove".$idn;
+          $approve="Tapprove".$idn;
+          $disapprove="TDisapprove".$idn;
 
           if(isset($_POST[$approve])){
           $sql = "UPDATE `Apply tender` SET `state`='1' WHERE `id`='$idn' ";
@@ -115,10 +115,10 @@ function addjob(){
     $salary=$_POST['Salary'];
     $vacancies=$_POST['Vacancies'];
     $date=$_POST['date'];
-  $org=$_SESSION['username'];
+    $org=$_SESSION['username'];
     $conn=connect();
-      $addjob = "INSERT INTO `Jobs`(`job-title`, `job-desc`, `vacancies`, `salary`, `category`, `due-date`, `organisation`)
-VALUES ('$jobtitle','$jobdesc','$vacancies','$salary','$category','$date','$org','0')";
+      $addjob = "INSERT INTO `Jobs`(`job-title`, `job-desc`, `vacancies`, `salary`, `category`, `due-date`, `organisation`,`state`)
+          VALUES ('$jobtitle','$jobdesc','$vacancies','$salary','$category','$date','$org','0')";
 if ($conn->query($addjob) === TRUE) {
 
 } else {
