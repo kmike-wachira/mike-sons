@@ -4,7 +4,7 @@
 function showJobs(){
   $connect2=connect();
   $userid=$_SESSION['id'];
-  $myjob ="SELECT `id`, `jobid`, `personaid`, `state` FROM `Apply job`";
+  $myjob ="SELECT `id`, `jobid`, `personaid`, Cartstatus(state) as state FROM `Apply job`";
   $resultset = $connect2->query($myjob);
 if ($resultset->num_rows > 0) {
     // output data of each row
@@ -63,7 +63,7 @@ function showTender(){
   include 'connection.php';
   // include 'connection.php';
     $connect1=connect();
-    $mytender ="SELECT `id`, `tenderid`, `personnaid`, `state` FROM `Apply tender`";
+    $mytender ="SELECT `id`, `tenderid`, `personnaid`,Cartstatus(state) as state FROM `Apply tender`";
     $resultset = $connect1->query($mytender);
   if ($resultset->num_rows > 0) {
       // output data of each row
